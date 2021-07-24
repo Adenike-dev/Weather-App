@@ -1,0 +1,13 @@
+.weather-app {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 15px 60px;
+  border: 0.5px transparent #5f939a;
+  border-radius: 25px;
+}
+/* .container {
+  background-image: url(/images/cloud.jpeg);
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 200px;
+} */
