@@ -22,18 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Zen+Loop&display=swap"
-      rel="stylesheet"
-    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Tourney&family=Zen+Loop&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/styles.css" />
 
     <title>Weather App</title>
@@ -66,11 +63,12 @@
             <div class="main-heading">
               <h1 class="heading">Lagos</h1>
               <ul>
-                <li class="weekDay">
-                  Tuesday <span class="date">July 6,2021</span>
+                <li class="weekDay" id="week-day">
+                  Tuesday <span class="date" id="date">July 6,2021</span>
                 </li>
                 <li class="time">
-                  Last updated at <span class="time-input"> 5:00 </span>
+                  Last updated at
+                  <span class="time-input" id="time-id"> 5:00 </span>
                 </li>
               </ul>
             </div>
@@ -80,8 +78,10 @@
                 src="images/icons/clourain.png"
                 alt="cloudy rain"
               /> -->
-              <h1>
-                29<span class="degree">°C |<a href="#">&#8457;</a></span>
+              <h1 id="main-temp">
+                29<span id="degree-id" class="degree"
+                  >°C |<a href="#" id="fahren-id">&#8457;</a></span
+                >
               </h1>
               <p id="description">Slightly cloudly</p>
             </div>
@@ -89,16 +89,17 @@
             <div id="weather-elements">
               <ul>
                 <li class="temperature">
-                  Temp: <span class="temp-input">88°C</span>
+                  Temp: <span class="temp-input" id="temp-id">88°C</span>
                 </li>
                 <li class="humidity">
-                  Humidity: <span class="humidity-input">66% </span>
-                </li>
-                <li class="precipate">
-                  Precipitation: <span class="precipate-input"> 76% </span>
+                  Humidity: <span class="humidity-input" id="humid">66% </span>
                 </li>
                 <li class="wind">
-                  Wind: <span class="wind-input"> 2KM/H </span>
+                  Wind: <span class="wind-input" id="wind-id"> 2m/h </span>
+                </li>
+                <li class="precipate">
+                  Feels like:
+                  <span class="precipate-input" id="feels-like"> 76°C </span>
                 </li>
               </ul>
             </div>
