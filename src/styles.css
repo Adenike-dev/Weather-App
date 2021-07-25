@@ -31,9 +31,12 @@ a.hover {
 h1 {
   font-size: 100px;
 }
-/* .degree {
-  font-size: 10px;
-} */
+.degree {
+  position: relative;
+  font-size: 20px;
+  font-weight: 200;
+  top: -52px;
+}
 div .forecast {
   width: 40px;
 }
@@ -42,10 +45,7 @@ div .forecast {
   margin-left: -5px;
   float: left;
 }
-.center-forecast {
-  display: block;
-  margin: 0 auto;
-}
+
 .company-name {
   color: #045762;
   font-size: 25px;
@@ -98,7 +98,7 @@ ul {
 }
 .center-forecast {
   text-align: center;
-  margin: 100px auto;
+  margin: 60px auto;
   color: #ea97ad;
   font-size: 100px;
   font-family: "Amatic SC", cursive;
