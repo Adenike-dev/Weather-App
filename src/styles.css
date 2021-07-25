@@ -1,7 +1,13 @@
 body {
   background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
-
+a {
+  text-decoration: none;
+  color: #ea97ad;
+}
+a.hover {
+  color: #feddbe;
+}
 .weather-app {
   max-width: 500px;
   margin: 60px auto;
@@ -9,11 +15,12 @@ body {
   border: 0.5px transparent #5f939a;
   border-radius: 25px;
   background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
+    circle at 10% 20%,
+    rgb(137, 210, 253) 0%,
+    rgb(255, 241, 188) 90%
   );
   box-sizing: border-box;
+  margin-bottom: 0;
 }
 /* .container {
   background-image: url(/images/cloud.jpeg);
@@ -21,7 +28,12 @@ body {
   width: 100px;
   height: 200px;
 } */
-
+h1 {
+  font-size: 100px;
+}
+/* .degree {
+  font-size: 10px;
+} */
 div .forecast {
   width: 40px;
 }
@@ -33,4 +45,80 @@ div .forecast {
 .center-forecast {
   display: block;
   margin: 0 auto;
+}
+.company-name {
+  color: #045762;
+  font-size: 25px;
+  font-family: "Amatic SC", cursive;
+}
+.biz-name {
+  color: #ea97ad;
+  font-size: 20px;
+}
+.search-bar {
+  margin: 30px auto;
+}
+
+ul {
+  list-style: none;
+}
+.heading,
+.weekDay,
+.time {
+  text-align: center;
+}
+.heading {
+  color: #ea97ad;
+  font-size: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.weekDay,
+.time {
+  font-family: "Dancing Script", cursive;
+  font-size: 15px;
+  color: #548ca8;
+}
+.footer {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  color: #548ca8;
+  font-size: 20px;
+}
+#description {
+  font-family: "Dancing Script", cursive;
+  font-size: 25px;
+  color: #548ca8;
+}
+#weather-elements {
+  font-family: "Amatic SC", cursive;
+  font-family: "Zen Loop", cursive;
+  text-align: center;
+  font-size: 20px;
+  color: #ea97ad;
+}
+.center-forecast {
+  text-align: center;
+  margin: 100px auto;
+  color: #ea97ad;
+  font-size: 100px;
+  font-family: "Amatic SC", cursive;
+  font-family: "Tourney", cursive;
+  font-family: "Zen Loop", cursive;
+}
+.future {
+  font-family: "Amatic SC", cursive;
+  font-family: "Zen Loop", cursive;
+  font-weight: bold;
+  color: #548ca8;
+}
+.form-control,
+.btn {
+  font-family: "Amatic SC", cursive;
+  font-family: "Zen Loop", cursive;
+}
+.temp-input,
+.wind-input,
+.precipate-input,
+.humidity-input {
+  color: #548ca8;
 }

@@ -10,7 +10,32 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Zen+Loop&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Tourney&family=Zen+Loop&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/styles.css" />
+
     <title>Weather App</title>
   </head>
   <body>
@@ -18,7 +43,7 @@
       <div class="weather-app">
         <div class="mainForecast">
           <div class="company-name">
-            MHG<span class="biz-name">creations</span>
+            🌸 MHG<span class="biz-name">creations</span>
           </div>
           <div class="search-bar">
             <form id="search-form" class="form-Input">
@@ -38,20 +63,24 @@
                 </div>
               </div>
             </form>
-            <h1 id="heading">Lagos</h1>
-            <p id="time">
-              Last updated at <span class="time-input"> 5:00 </span>
-            </p>
-            <div class="weekDay">
-              Tuesday <span class="date">July 6,2021</span>
+            <div class="main-heading">
+              <h1 class="heading">Lagos</h1>
+              <ul>
+                <li class="weekDay">
+                  Tuesday <span class="date">July 6,2021</span>
+                </li>
+                <li class="time">
+                  Last updated at <span class="time-input"> 5:00 </span>
+                </li>
+              </ul>
             </div>
             <div class="center-forecast">
-              <img
+              <!-- <img
                 class="main-forecast"
                 src="images/icons/clourain.png"
                 alt="cloudy rain"
-              />
-              <h1>29&deg;C</h1>
+              /> -->
+              <h1>29 <span class="degree">&deg;C</span></h1>
               <p id="description">Slightly cloudly</p>
             </div>
 
@@ -140,29 +169,27 @@
               <div>22&deg;C</div>
             </div>
           </div>
-          <div class="footer">
-            This project was coded by
-            <a
-              href
-              class="footerName"
-              ="www.linkedin.com/in/adenike-adefokun
-				"
-              target="_blank"
-              >Adenike</a
-            >
-            and is
-            <a href="https://github.com/Adenike-dev/Weather-App" target="_blank"
-              >open-sourced on GitHub</a
-            >
-            and
-            <a
-              href="https://romantic-ardinghelli-56e88a.netlify.app/"
-              target="_blank"
-              >hosted on Netlify</a
-            >
-          </div>
         </div>
       </div>
+    </div>
+    <div class="footer">
+      This project was coded by
+      <a
+        href
+        class="footerName"
+        ="www.linkedin.com/in/adenike-adefokun
+				"
+        target="_blank"
+        >Adenike</a
+      >
+      and is
+      <a href="https://github.com/Adenike-dev/Weather-App" target="_blank"
+        >open-sourced on GitHub</a
+      >
+      and
+      <a href="https://romantic-ardinghelli-56e88a.netlify.app/" target="_blank"
+        >hosted on Netlify</a
+      >
     </div>
     <script src="src/index.js"></script>
   </body>
