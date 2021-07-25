@@ -1,9 +1,19 @@
+body {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+
 .weather-app {
   max-width: 500px;
   margin: 60px auto;
   padding: 15px 60px;
   border: 0.5px transparent #5f939a;
   border-radius: 25px;
+  background: radial-gradient(
+    592px at 48.2% 50%,
+    rgba(255, 255, 249, 0.6) 0%,
+    rgb(160, 199, 254) 74.6%
+  );
+  box-sizing: border-box;
 }
 /* .container {
   background-image: url(/images/cloud.jpeg);
@@ -11,3 +21,16 @@
   width: 100px;
   height: 200px;
 } */
+
+div .forecast {
+  width: 40px;
+}
+.main-forecast {
+  width: 100px;
+  margin-left: -5px;
+  float: left;
+}
+.center-forecast {
+  display: block;
+  margin: 0 auto;
+}
