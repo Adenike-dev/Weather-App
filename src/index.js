@@ -33,8 +33,13 @@ function formatDate(datestamp) {
 function formatTime(timestamp) {
   let currentTime = new Date(timestamp);
   let hours = currentTime.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = currentTime.getMinutes();
-
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
   return `${hours} : ${minutes}`;
 }
 
@@ -46,8 +51,6 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
-  let tempElement = document.querySelector("#temp-id");
-  tempElement.innerHTML = ` ${Math.round(response.data.main.temp)}°C`;
   let humidElement = document.querySelector("#humid");
   humidElement.innerHTML = ` ${Math.round(response.data.main.humidity)}%`;
   let windElement = document.querySelector("#wind-id");
@@ -58,6 +61,13 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let timeElement = document.querySelector("#time-id");
   timeElement.innerHTML = formatTime(response.data.dt * 1000);
+  let iconElement = document.querySelector("#main-image");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  // to change the alt response to the current weather description
 }
 
 let apiKey = "815a29c49f1689eb0317380664e5d969";
