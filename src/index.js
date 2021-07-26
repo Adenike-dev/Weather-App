@@ -45,7 +45,8 @@ function formatTime(timestamp) {
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#main-temp");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  celsuisTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celsuisTemperature);
   console.log(response.data);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
@@ -66,11 +67,54 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  //   iconElement.setAttribute("alt", response.data.weather[0].description);
   // to change the alt response to the current weather description
 }
 
-let apiKey = "815a29c49f1689eb0317380664e5d969";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=london&appid=${apiKey}&units=metric`;
+// to link the search form (city) to get weather for the city name inputted.
+function search(city) {
+  let apiKey = "815a29c49f1689eb0317380664e5d969";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityIdElement = document.querySelector("#city-id");
+  search(cityIdElement.value);
+}
+// this needs to be added to connect the search engine with the city inputted
+search("Ilesa");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#main-temp");
+  let fahrenheitTemp = (celsuisTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+
+  //   to interchange the active link on celsuis and fahrenheit when they are been clicked.
+  celsuisId.classList.remove("active");
+  fahrenId.classList.add("active");
+}
+let celsuisTemperature = null;
+// check up for the linking of celsuis temp
+
+let fahrenId = document.querySelector("#fahren-id");
+fahrenId.addEventListener("click", showFahrenheit);
+
+function showCelsuis(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#main-temp");
+  temperatureElement.innerHTML = Math.round(celsuisTemperature);
+
+  //   to interchange the active link on celsuis and fahrenheit when they are been clicked.
+  celsuisId.classList.add("active");
+  fahrenId.classList.remove("active");
+}
+
+let celsuisId = document.querySelector("#degree-id");
+celsuisId.addEventListener("click", showCelsuis);
