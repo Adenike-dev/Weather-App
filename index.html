@@ -53,15 +53,18 @@
                     aria-label="Search for a city..."
                     autofocus="on"
                     autocomplete="off"
+                    id="city-id"
                   />
                 </div>
-                <div class="col-3">
-                  <button type="submit" class="btn btn-info">Search</button>
+                <div class="btn-hover col-3">
+                  <button type="button" class="btn btn-info w-100">
+                    Search
+                  </button>
                 </div>
               </div>
             </form>
             <div class="main-heading">
-              <h1 class="heading" id="city">Lagos</h1>
+              <h1 class="heading" id="city"></h1>
               <ul>
                 <li class="weekDay" id="week-day">
                   <span class="date" id="date">Thursday, July 6,2021</span>
@@ -73,11 +76,12 @@
               </ul>
             </div>
             <div class="center-forecast">
-              <img id="main-image" src="" alt="cloudy rain" />
+              <img id="main-image" src="" alt="" />
               <h1>
                 <span id="main-temp"> 29</span
-                ><span id="degree-id" class="degree"
-                  >°C |<a href="#" id="fahren-id">&#8457;</a></span
+                ><span class="degree">
+                  <a href="#" id="degree-id" class="active">°C</a>
+                  |<a href="#" id="fahren-id">&#8457;</a></span
                 >
               </h1>
               <p id="description">Slightly cloudly</p>
