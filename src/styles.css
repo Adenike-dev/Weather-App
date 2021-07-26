@@ -32,11 +32,46 @@ a.hover {
 h1 {
   font-size: 100px;
 }
+.center-forecast {
+  text-align: center;
+  margin: 60px auto;
+  color: #ea97ad;
+  font-size: 100px;
+  font-family: "Amatic SC", cursive;
+  font-family: "Tourney", cursive;
+  font-family: "Zen Loop", cursive;
+}
 .degree {
   position: relative;
   font-size: 20px;
   font-weight: 200;
   top: -52px;
+}
+.center-forecast .active {
+  color: #3d84b8;
+  cursor: default;
+}
+.center-forecast .active {
+  text-decoration: none;
+}
+button {
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f3c583;
+  background-color: #3d84b8;
+  font-size: 12px;
+  padding: 10px 20px;
+  border: 1px solid #f3c583;
+  border-radius: 10px;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0 0.3);
+  transition: all 200ms ease-in-out;
+}
+button:hover {
+  color: #3d84b8;
+  background-color: #f3c583;
+  cursor: pointer;
+  border: 1px solid #3d84b8;
 }
 div .forecast {
   width: 40px;
@@ -100,15 +135,7 @@ p:first-letter {
   font-size: 20px;
   color: #ea97ad;
 }
-.center-forecast {
-  text-align: center;
-  margin: 60px auto;
-  color: #ea97ad;
-  font-size: 100px;
-  font-family: "Amatic SC", cursive;
-  font-family: "Tourney", cursive;
-  font-family: "Zen Loop", cursive;
-}
+
 .future {
   font-family: "Amatic SC", cursive;
   font-family: "Zen Loop", cursive;
