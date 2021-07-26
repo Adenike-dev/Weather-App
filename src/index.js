@@ -47,7 +47,7 @@ function displayTemperature(response) {
   let temperatureElement = document.querySelector("#main-temp");
   celsuisTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(celsuisTemperature);
-  console.log(response.data);
+  //   console.log(response.data);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
