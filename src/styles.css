@@ -7,7 +7,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #ea97ad;
+  color: #ffaa4c;
 }
 a.hover {
   color: #feddbe;
@@ -35,7 +35,7 @@ h1 {
 .center-forecast {
   text-align: center;
   margin: 60px auto;
-  color: #ea97ad;
+  color: #ffaa4c;
   font-size: 100px;
   font-family: "Amatic SC", cursive;
   font-family: "Tourney", cursive;
@@ -56,20 +56,19 @@ h1 {
 }
 button {
   display: block;
-
   font-family: Arial, Helvetica, sans-serif;
-  color: #f3c583;
+  color: #ffaa4c;
   background-color: #3d84b8;
   font-size: 12px;
-  padding: 10px 20px;
-  border: 1px solid #f3c583;
+  padding: 10px 30px;
+  border: 1px solid #ffaa4c;
   border-radius: 10px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0 0.3);
   transition: all 200ms ease-in-out;
 }
 button:hover {
   color: #3d84b8;
-  background-color: #f3c583;
+  background-color: #ffaa4c;
   cursor: pointer;
   border: 1px solid #3d84b8;
 }
@@ -88,7 +87,7 @@ div .forecast {
   font-family: "Amatic SC", cursive;
 }
 .biz-name {
-  color: #ea97ad;
+  color: #ffaa4c;
   font-size: 20px;
 }
 .search-bar {
@@ -107,7 +106,7 @@ p:first-letter {
   text-align: center;
 }
 .heading {
-  color: #ea97ad;
+  color: #ffaa4c;
   font-size: 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -133,7 +132,7 @@ p:first-letter {
   font-family: "Zen Loop", cursive;
   text-align: center;
   font-size: 20px;
-  color: #ea97ad;
+  color: #ffaa4c;
 }
 
 .future {
