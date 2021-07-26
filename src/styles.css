@@ -63,7 +63,7 @@ div .forecast {
 ul {
   list-style: none;
 }
-p {
+p:first-letter {
   text-transform: capitalize;
 }
 .heading,
@@ -120,7 +120,7 @@ p {
   font-family: "Amatic SC", cursive;
   font-family: "Zen Loop", cursive;
 }
-.temp-input,
+
 .wind-input,
 .precipate-input,
 .humidity-input {
