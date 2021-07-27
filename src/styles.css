@@ -41,6 +41,7 @@ h1 {
   font-family: "Tourney", cursive;
   font-family: "Zen Loop", cursive;
 }
+
 .degree {
   position: relative;
   font-size: 20px;
@@ -100,6 +101,7 @@ ul {
 p:first-letter {
   text-transform: capitalize;
 }
+
 .heading,
 .weekDay,
 .time {
@@ -127,6 +129,7 @@ p:first-letter {
   font-size: 25px;
   color: #548ca8;
 }
+
 #weather-elements {
   font-family: "Amatic SC", cursive;
   font-family: "Zen Loop", cursive;
@@ -134,12 +137,15 @@ p:first-letter {
   font-size: 20px;
   color: #ffaa4c;
 }
-
+.forecast-day {
+  font-size: 25px;
+}
 .future {
   font-family: "Amatic SC", cursive;
   font-family: "Zen Loop", cursive;
   font-weight: bold;
   color: #548ca8;
+  text-align: center;
 }
 .form-control,
 .btn {
