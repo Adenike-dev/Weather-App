@@ -118,3 +118,34 @@ function showCelsuis(event) {
 
 let celsuisId = document.querySelector("#degree-id");
 celsuisId.addEventListener("click", showCelsuis);
+
+function showForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+                 <div class="col">
+              <div class="forecast-day">${day}</div>
+                <img
+                  class="forecast"
+                  src="images/icons/rainy.png"
+                  alt="rainy"
+                />
+              <div class="forcast-temp">
+                <span class="forcast-temp-max">25&deg</span
+                ><span class="forcast-temp-min">15&deg</span>
+              </div>
+          
+            `;
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+  });
+  console.log(forecastHTML);
+}
+
+showForecast();
