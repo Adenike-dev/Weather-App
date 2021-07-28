@@ -130,33 +130,58 @@ function showCelsuis(event) {
 let celsuisId = document.querySelector("#degree-id");
 celsuisId.addEventListener("click", showCelsuis);
 
-function showForecast() {
+// For the days to show, a function formatFutureDays was called istead of the loop earlier done.
+function formatFutureDays(timestamp) {
+  let date = new Date(timestamp * 1000);
+
+  let dayIndex = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let day = days[dayIndex];
+
+  return day;
+}
+
+function showForecast(response) {
+  let dailyForecast = response.data.daily;
   let forecastElement = document.querySelector("#weather-forecast");
   // To grid the forecast, there is a need for the row class in a div(open and close)
   let forecastHTML = `<div class="row">`;
   //   In order to show forecast for the next 5 days, there is a need to loop usinf the forEach function.
-  let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  //   //   let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  //   days.forEach(function (day) {
+  console.log(response);
+  dailyForecast.forEach(function (forecastDaily, index) {
+    //   if (index < 6) is used to limit the number of days shown to 6 since we are using a 7 day forcast
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
              <div class="col">
-              <div class="forecast-day">${day}</div>
+              <div class="forecast-day">${formatFutureDays(
+                forecastDaily.dt
+              )}</div>
                 <img
                   class="forecast"
-                  src="images/icons/rainy.png"
+                  src="http://openweathermap.org/img/wn/${
+                    forecastDaily.weather[0].icon
+                  }@2x.png"
                   alt="rainy"
                 />
               <div class="forcast-temp">
-                <span class="forcast-temp-max">25&deg</span
-                ><span class="forcast-temp-min">15&deg</span>
+                <span class="forcast-temp-max">
+                ${Math.round(forecastDaily.temp.max)}&deg 
+                </span>
+                <span class="forcast-temp-min">
+                ${Math.round(forecastDaily.temp.min)}&deg
+                </span>
               </div>
-          
+              </div>
             `;
-
-    forecastHTML = forecastHTML + `</div>`;
-    forecastElement.innerHTML = forecastHTML;
+    }
   });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
-showForecast();
+// showForecast();
+// was needed to call the function showforecast to show the days that were looped
