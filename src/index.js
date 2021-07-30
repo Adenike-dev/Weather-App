@@ -43,7 +43,6 @@ function formatTime(timestamp) {
   return `${hours} : ${minutes}`;
 }
 function getFutureForecast(coordinates) {
-  console.log(coordinates);
   //   to get the daily forecast, there is a need for lon and lat
   let apiKey = "815a29c49f1689eb0317380664e5d969";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
@@ -101,35 +100,6 @@ search("Ilesa");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#main-temp");
-  let fahrenheitTemp = (celsuisTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-
-  //   to interchange the active link on celsuis and fahrenheit when they are been clicked.
-  celsuisId.classList.remove("active");
-  fahrenId.classList.add("active");
-}
-let celsuisTemperature = null;
-// check up for the linking of celsuis temp
-
-let fahrenId = document.querySelector("#fahren-id");
-fahrenId.addEventListener("click", showFahrenheit);
-
-function showCelsuis(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#main-temp");
-  temperatureElement.innerHTML = Math.round(celsuisTemperature);
-
-  //   to interchange the active link on celsuis and fahrenheit when they are been clicked.
-  celsuisId.classList.add("active");
-  fahrenId.classList.remove("active");
-}
-
-let celsuisId = document.querySelector("#degree-id");
-celsuisId.addEventListener("click", showCelsuis);
-
 // For the days to show, a function formatFutureDays was called istead of the loop earlier done.
 function formatFutureDays(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -149,7 +119,7 @@ function showForecast(response) {
   //   In order to show forecast for the next 5 days, there is a need to loop usinf the forEach function.
   //   //   let days = ["Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   //   days.forEach(function (day) {
-  console.log(response);
+
   dailyForecast.forEach(function (forecastDaily, index) {
     //   if (index < 6) is used to limit the number of days shown to 6 since we are using a 7 day forcast
     if (index < 6) {
