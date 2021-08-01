@@ -45,7 +45,7 @@ function formatTime(timestamp) {
 function getFutureForecast(coordinates) {
   //   to get the daily forecast, there is a need for lon and lat
   let apiKey = "815a29c49f1689eb0317380664e5d969";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&unit=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showForecast);
 }
